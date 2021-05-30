@@ -1,6 +1,6 @@
 # finalsFoodCart
 
-# Serve on localhost:8000
+# Serve on localhost:8080
 npm start
 
 # Dev Server (Nodemon)
