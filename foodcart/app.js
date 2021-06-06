@@ -11,9 +11,12 @@ db.authenticate()
 
 const app = express();
 
+app.set('view engine', 'ejs');
+app.use(express.static(path.join(__dirname, 'public')))
+
 app.get('/', (req,res)=> res.send ('INDEX'));
 
 app.use('/orders', require('./routes/orders'));
 
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 8020;
 app.listen(PORT, console.log('Server connected'));

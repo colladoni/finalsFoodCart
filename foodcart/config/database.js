@@ -1,8 +1,12 @@
 const Sequelize = require('sequelize');
 module.exports = new Sequelize('foodcart', 'username', 'password', {
-    host: 'localhost',
+    host: "127.0.0.1",
+    USER: "root",
+     PASSWORD: "password",
     dialect: 'mysql',
-    operatorsAliases: false,
+    database: 'foodcart',
+    operatorsAliases: 0,
+
 
     pool:{
         max: 5,
