@@ -1,0 +1,17 @@
+<link rel="stylesheet" href="/css/style.css">
+<section id="search" class="searchWrap">
+    <h1>Results</h1>
+    <%for(var i=0; i<orders.length; i++) {%>
+        <div class="gig">
+            <h3><%=orders[i].orderId%></h3>
+            <p><%=orders[i].productName%></p>
+            <ul>
+              <li>Price: <%=orders[i].price%></li>
+              <li><a href="#" class="btn btn-reverse">Buy Now</a></li>
+            </ul>
+            <div class="tech">
+              <small>Description: <span><%=orders[i].description%></span></small>
+            </div>
+          </div>
+    <% } %>       
+</section>

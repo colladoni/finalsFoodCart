@@ -1,0 +1,19 @@
+<section id="gigs" class="container">
+    <h1 style="color: white;">All Orders</h1>
+    <%for(var i=0; i<orders.length; i++) {%>
+        <div class="gig">
+            <h3><%=orders[i].orderId%></h3>
+            <p><%=orders[i].productName%></p>
+            <ul>
+              <li>Price: <%=orders[i].price%></li>
+              <li><a href="#" class="btn btn-reverse">Buy Now</a></li>
+            </ul>
+            <div class="tech">
+              <small>Description: <span><%=orders[i].description%></span></small>
+            </div>
+          </div>
+    <% } %>       
+</section>
+
+
+

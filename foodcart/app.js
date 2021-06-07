@@ -1,19 +1,40 @@
 const express = require('express');
 const exphbs = require('express-handlebars');
 const bodyParser = require('body-parser');
-const path= require('path');
+const path = require('path');
+let ejs = require('ejs');
+var expressLayouts=require("express-ejs-layouts");
 
+
+//Database
 const db = require('./config/database');
+
+//Test DB
 db.authenticate()
     .then(()=> console.log('Database connected'))
-    .catch(err => console.log('Error!' +err))
-
+    .catch(err =>console.log('Error: ' + err))
 
 const app = express();
 
-app.get('/', (req,res)=> res.send ('INDEX'));
+//ejs
+app.use(expressLayouts);
+app.set('layout', './layouts/main');
+app.set('view engine', 'ejs');
 
-app.use('/orders', require('./routes/orders'));
+// Body Parser
+app.use(bodyParser.urlencoded({extended: false}));
 
-const PORT = process.env.PORT || 8080;
-app.listen(PORT, console.log('Server connected'));
+
+//Set static folder
+app.use(express.static(path.join(__dirname, 'public')));
+
+//Index route
+app.get('/', (req,res)=> res.render('index', { layout: './layouts/landing'}));
+
+//Order routes
+app.use('/order', require('./routes/order'));
+
+const PORT = process.env.PORT || 8030;
+
+app.listen(PORT, console.log('Server started on port %d', PORT));
+

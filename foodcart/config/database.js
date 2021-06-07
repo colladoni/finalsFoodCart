@@ -1,8 +1,9 @@
-const Sequelize = require('sequelize');
-module.exports = new Sequelize('foodcart', 'username', 'password', {
-    host: 'localhost',
-    dialect: 'mysql',
-    operatorsAliases: false,
+const Sequelize = require("sequelize");
+
+module.exports = new Sequelize("foodcartfinal", "root", "",{
+    host: "localhost",
+    dialect: "mysql",
+    operatorAliases: 0,
 
     pool:{
         max: 5,
