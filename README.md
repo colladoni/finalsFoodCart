@@ -1,7 +1,7 @@
 # finalsFoodCart
 
 # Create database in mySql/phpmyadmin
--foodcartfinal
+-foodcarts
 
 # Migrate the tables to mysql
 -type npx sequelize-cli db:migrate in vscode terminal
