@@ -1,0 +1,17 @@
+<link rel="stylesheet" href="/css/style.css">
+<section id="edit" class="container">
+        <div class="form-wrap">
+          <h1>Edit an Order</h1>
+          <p>Enter Product Name</p>
+
+
+          <form action="/order/edit" method="POST">
+            <div class="input-group">
+              <label for="title">Price</label>
+              <input type="text" name="price" id="price" class="input-box" maxlength="100"  required>
+            </div>
+
+            <input type="submit" value="Update" class="btn btn-reverse">
+          </form>
+        </div>
+</section>

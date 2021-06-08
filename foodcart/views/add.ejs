@@ -1,0 +1,28 @@
+<link rel="stylesheet" href="/css/style.css">
+<section id="add" class="container">
+        <div class="form-wrap">
+          <h1>Add an Order</h1>
+          <p>Your order will be placed directly to the database</p>
+
+
+          <form action="/order/add" method="POST">
+            <div class="input-group">
+              <label for="title">Order Number</label>
+              <input type="number" name="orderId" id="orderId" class="input-box" maxlength="100"  required>
+            </div>
+            <div class="input-group">
+              <label for="technologies">Product Name</label>
+              <input type="text" name="productName" id="productName" class="input-box" maxlength="100"  required>
+            </div>
+            <div class="input-group">
+              <label for="budget">Price</label>
+              <input type="number" name="price" id="price" class="input-box"  required>
+            </div>
+            <div class="input-group">
+              <label for="description">Description</label>
+              <textarea name="description" id="description" class="input-box" rows="10" required></textarea>
+            </div>
+            <input type="submit" value="Add Order" class="btn btn-reverse">
+          </form>
+        </div>
+</section>

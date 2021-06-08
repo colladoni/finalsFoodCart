@@ -1,38 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
+<section id="gigs" class="container">
+    <h1 style="color: white;">All Orders</h1>
+    <%for(var i=0; i<orders.length; i++) {%>
+        <div class="gig">
+            <h3><%=orders[i].orderId%></h3>
+            <p><%=orders[i].productName%></p>
+            <ul>
+              <li>Price: <%=orders[i].price%></li>
+             
+            </ul>
+            <div class="tech">
+              <small>Description: <span><%=orders[i].description%></span></small>
+            </div>
+          </div>
+    <% } %>       
+</section>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
-    crossorigin="anonymous">
 
 
-  <link rel="stylesheet" href="public/css/style.css">
-  <title>FoodCart</title>
-</head>
-
-<body>
-  <header class="inner">
-    <h2><a href="/"><i class="fas fa-code"></i>
-        CodeGig</a></h2>
-    <nav>
-      <ul>
-        <li>
-          <a href="/">Home</a>
-        </li>
-        <li>
-          <a href="/orders">All Gigs</a>
-        </li>
-        <li>
-          <a href="/orders/add">Add Gig</a>
-        </li>   
-      </ul>
-    </nav>
-  </header>
-<h1>HELLO</h1>
- {{{body}}}
-</body>
-
-</html>

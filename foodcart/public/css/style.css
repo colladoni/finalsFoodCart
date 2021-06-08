@@ -15,7 +15,7 @@ body {
   font-family: 'Lato', sans-serif;
   margin: 0;
   color: #333;
-  background: #f4f4f4;
+  background: #8cbf96;
 }
 
 ul {
@@ -102,8 +102,8 @@ header.inner {
 }
 
 /* Home Search */
-.search-wrap {
-  background: url('../img/showcase.jpg') no-repeat center center fixed / cover;
+.searchWrap{
+  background: url('../img/img.jpg') no-repeat center center fixed / cover;
   height: 100vh;
   width: 100%;
   padding: 1.3rem 3rem;
@@ -113,7 +113,7 @@ header.inner {
   align-items: center;
 }
 
-.search-wrap h1 {
+.searchWrap h1 {
   font-size: 3rem;
   font-weight: 800;
   color: #fff;

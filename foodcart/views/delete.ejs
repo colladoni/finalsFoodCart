@@ -1,0 +1,17 @@
+<link rel="stylesheet" href="/css/style.css">
+<section id="delete" class="container">
+        <div class="form-wrap">
+          <h1>Delete an Order</h1>
+          <p>Enter Product Name</p>
+
+
+          <form action="/order/delete" method="POST">
+            <div class="input-group">
+              <label for="title">Product Name</label>
+              <input type="text" name="productName" id="productName" class="input-box" maxlength="100"  required>
+            </div>
+
+            <input type="submit" value="Delete Order" class="btn btn-reverse">
+          </form>
+        </div>
+</section>
