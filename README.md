@@ -1,7 +1,13 @@
 # finalsFoodCart
 
-# Serve on localhost:8080
-npm start
+# Create database in mySql/phpmyadmin
+-foodcarts
+
+# Migrate the tables to mysql
+-type npx sequelize-cli db:migrate in vscode terminal
+
+# Serve on localhost:8030
+-node app
 
 # Dev Server (Nodemon)
-nodemon app
+-nodemon app
